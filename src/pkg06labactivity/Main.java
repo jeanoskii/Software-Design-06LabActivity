@@ -55,21 +55,21 @@ public class Main {
         } else if (month == 4) {
             dayOfMonth += 90;
         } else if (month == 5) {
-            dayOfMonth += 31 + 28 + 31 + 30;
+            dayOfMonth += 31 + 28 + 31 + 31;
         } else if (month == 6) {
-            dayOfMonth += 31 + 28 + 31 + 30 + 31;
+            dayOfMonth += 31 + 28 + 31 + 31 + 30;
         } else if (month == 7) {
-            dayOfMonth += 31 + 28 + 31 + 30 + 31 + 30;
+            dayOfMonth += 31 + 28 + 31 + 31 + 30 + 31;
         } else if (month == 8) {
-            dayOfMonth += 31 + 28 + 31 + 30 + 31 + 30 + 31;
+            dayOfMonth += 31 + 28 + 31 + 31 + 30 + 31 + 31;
         } else if (month == 9) {
-            dayOfMonth += 31 + 28 + 31 + 30 + 31 + 30 + 31 + 31;
+            dayOfMonth += 31 + 28 + 31 + 31 + 30 + 31 + 31 + 30;
         } else if (month == 10) {
-            dayOfMonth += 31 + 28 + 31 + 30 + 31 + 30 + 31 + 31 + 30;
+            dayOfMonth += 31 + 28 + 31 + 31 + 30 + 31 + 31 + 30 + 31;
         } else if (month == 11) {
-            dayOfMonth += 31 + 28 + 31 + 30 + 31 + 30 + 31 + 31 + 30 + 31;
+            dayOfMonth += 31 + 28 + 31 + 31 + 30 + 31 + 31 + 30 + 31 + 30;
         } else if (month == 12) {
-            dayOfMonth += 31 + 28 + 31 + 30 + 31 + 30 + 31 + 31 + 30 + 31 + 31;
+            dayOfMonth += 31 + 28 + 31 + 31 + 30 + 31 + 31 + 30 + 31 + 30 + 31;
         }
         return dayOfMonth;
     }
