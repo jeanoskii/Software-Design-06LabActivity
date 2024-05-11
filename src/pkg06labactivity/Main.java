@@ -26,13 +26,12 @@ public class Main {
             String dayOfMonth = s.nextLine();
             System.out.println("Please enter year: ");
             String year = s.nextLine();
-
+           
             int dayOfYear = dayOfYear(Integer.parseInt(month),
                     Integer.parseInt(dayOfMonth), Integer.parseInt(year));
-
+            
             System.out.println("Day of year is " + dayOfYear);
             System.out.println();
-            
             System.out.println("Do you want to start over? [y/n]");
             String res = s.nextLine();
             if(res.equalsIgnoreCase("n")) {
@@ -48,6 +47,33 @@ public class Main {
     // another example, if month is February, day of month is 23rd of February,
     // and year is 2023. the output will be 54 (54th day of the year).
     public static int dayOfYear(int month, int dayOfMonth, int year) {
+        if (( year%400 == 0)|| (( year%4 == 0 ) &&( year%100 != 0))){
+                System.out.println("is a Leap Year");
+        if (month == 2) {
+            dayOfMonth += 31;
+        } else if (month == 3) {
+            dayOfMonth += 60;
+        } else if (month == 4) {
+            dayOfMonth += 91;
+        } else if (month == 5) {
+            dayOfMonth += 31 + 29 + 31 + 31;
+        } else if (month == 6) {
+            dayOfMonth += 31 + 29 + 31 + 31 + 30;
+        } else if (month == 7) {
+            dayOfMonth += 31 + 29 + 31 + 31 + 30 + 31;
+        } else if (month == 8) {
+            dayOfMonth += 31 + 29 + 31 + 31 + 30 + 31 + 31;
+        } else if (month == 9) {
+            dayOfMonth += 31 + 29 + 31 + 31 + 30 + 31 + 31 + 30;
+        } else if (month == 10) {
+            dayOfMonth += 31 + 29 + 31 + 31 + 30 + 31 + 31 + 30 + 31;
+        } else if (month == 11) {
+            dayOfMonth += 31 + 29 + 31 + 31 + 30 + 31 + 31 + 30 + 31 + 30;
+        } else if (month == 12) {
+            dayOfMonth += 31 + 29 + 31 + 31 + 30 + 31 + 31 + 30 + 31 + 30 + 31;
+        }
+        return dayOfMonth;
+    }else {
         if (month == 2) {
             dayOfMonth += 31;
         } else if (month == 3) {
@@ -72,6 +98,6 @@ public class Main {
             dayOfMonth += 31 + 28 + 31 + 31 + 30 + 31 + 31 + 30 + 31 + 30 + 31;
         }
         return dayOfMonth;
-    }
+        }}}
     
-}
+
