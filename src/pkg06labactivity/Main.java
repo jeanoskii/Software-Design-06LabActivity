@@ -1,20 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
+
 package pkg06labactivity;
 
 import java.util.Scanner;
 
-/**
- *
- * @author user
- */
 public class Main {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         do {
             Scanner s = new Scanner(System.in);
@@ -22,6 +12,7 @@ public class Main {
             System.out.println("!  Day of Year Application  !");
             System.out.println("Please enter a month: ");
             String month = s.nextLine();
+            
             System.out.println("Please enter day of month: ");
             String dayOfMonth = s.nextLine();
             System.out.println("Please enter year: ");
@@ -37,7 +28,8 @@ public class Main {
             String res = s.nextLine();
             if(res.equalsIgnoreCase("n")) {
                 break;
-            }     
+            }    
+          
         } while (true);
     }
     
@@ -49,7 +41,13 @@ public class Main {
     // and year is 2023. the output will be 54 (54th day of the year).
     public static int dayOfYear(int month, int dayOfMonth, int year) {
         if (month == 2) {
+             if((year%4== 0) && (year%4==0) || (year%100!= 0) && (year%10==0)){
             dayOfMonth += 31;
+        }
+            else{
+                dayOfMonth += 30;
+             }
+                    
         } else if (month == 3) {
             dayOfMonth += 59;
         } else if (month == 4) {
