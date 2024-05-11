@@ -29,6 +29,8 @@ public class Main {
 
             int dayOfYear = dayOfYear(Integer.parseInt(month),
                     Integer.parseInt(dayOfMonth), Integer.parseInt(year));
+            
+            
 
             System.out.println("Day of year is " + dayOfYear);
             System.out.println();
@@ -48,12 +50,12 @@ public class Main {
     // another example, if month is February, day of month is 23rd of February,
     // and year is 2023. the output will be 54 (54th day of the year).
     public static int dayOfYear(int month, int dayOfMonth, int year) {
-        if (month == 2) {
-            dayOfMonth += 31;
-        } else if (month == 3) {
-            dayOfMonth += 59;
+        if (month == 2 ) {
+            dayOfMonth += 31 ;
+        } else if (month == 3) {  
+            dayOfMonth += 31 + 28 ;
         } else if (month == 4) {
-            dayOfMonth += 90;
+            dayOfMonth += 31 + 28 + 31;
         } else if (month == 5) {
             dayOfMonth += 31 + 28 + 31 + 30;
         } else if (month == 6) {
@@ -69,9 +71,11 @@ public class Main {
         } else if (month == 11) {
             dayOfMonth += 31 + 28 + 31 + 30 + 31 + 30 + 31 + 31 + 30 + 31;
         } else if (month == 12) {
-            dayOfMonth += 31 + 28 + 31 + 30 + 31 + 30 + 31 + 31 + 30 + 31 + 31;
+            dayOfMonth += 31 + 28 + 31 + 30 + 31 + 30 + 31 + 31 + 30 + 31 + 30;
         }
         return dayOfMonth;
+        //missed leaf year
+        //not execute if the day of month exceed
     }
     
 }
