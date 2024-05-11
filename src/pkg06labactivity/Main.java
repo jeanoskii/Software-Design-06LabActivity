@@ -55,23 +55,25 @@ public class Main {
         } else if (month == 4) {
             dayOfMonth += 90;
         } else if (month == 5) {
-            dayOfMonth += 31 + 28 + 31 + 30;
+            dayOfMonth += 120;
         } else if (month == 6) {
-            dayOfMonth += 31 + 28 + 31 + 30 + 31;
+            dayOfMonth += 151;
         } else if (month == 7) {
-            dayOfMonth += 31 + 28 + 31 + 30 + 31 + 30;
+            dayOfMonth += 181;
         } else if (month == 8) {
-            dayOfMonth += 31 + 28 + 31 + 30 + 31 + 30 + 31;
+            dayOfMonth += 212;
         } else if (month == 9) {
-            dayOfMonth += 31 + 28 + 31 + 30 + 31 + 30 + 31 + 31;
+            dayOfMonth += 243;
         } else if (month == 10) {
-            dayOfMonth += 31 + 28 + 31 + 30 + 31 + 30 + 31 + 31 + 30;
+            dayOfMonth += 273;
         } else if (month == 11) {
-            dayOfMonth += 31 + 28 + 31 + 30 + 31 + 30 + 31 + 31 + 30 + 31;
+            dayOfMonth += 304;
         } else if (month == 12) {
-            dayOfMonth += 31 + 28 + 31 + 30 + 31 + 30 + 31 + 31 + 30 + 31 + 31;
+            dayOfMonth += 335;
         }
         return dayOfMonth;
     }
-    
+    public static boolean isLeapYear(int year) {
+        return (year % 4 == 0 && year % 100 !=0) || (year % 400 == 0);
+    }
 }
