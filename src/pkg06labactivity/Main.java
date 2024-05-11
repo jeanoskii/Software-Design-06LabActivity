@@ -1,8 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
-package pkg06labactivity;
+package labactivity;
 
 import java.util.Scanner;
 
@@ -10,7 +6,7 @@ import java.util.Scanner;
  *
  * @author user
  */
-public class Main {
+public class lab {
 
     /**
      * @param args the command line arguments
@@ -23,12 +19,22 @@ public class Main {
             System.out.println("Please enter a month: ");
             String month = s.nextLine();
             System.out.println("Please enter day of month: ");
-            String dayOfMonth = s.nextLine();
+            int dayOfMonth = s.nextInt();
+            
+            if (dayOfMonth <= 31) { 
+            	
+            } else {
+            	System.out.println("Invalid Input! Please Input only 1-31 days");
+            	break;
+            }
+            
+            s.nextLine();
+            
             System.out.println("Please enter year: ");
             String year = s.nextLine();
 
             int dayOfYear = dayOfYear(Integer.parseInt(month),
-                    Integer.parseInt(dayOfMonth), Integer.parseInt(year));
+                    dayOfMonth, Integer.parseInt(year));
 
             System.out.println("Day of year is " + dayOfYear);
             System.out.println();
@@ -48,7 +54,8 @@ public class Main {
     // another example, if month is February, day of month is 23rd of February,
     // and year is 2023. the output will be 54 (54th day of the year).
     public static int dayOfYear(int month, int dayOfMonth, int year) {
-        if (month == 2) {
+    
+    	 if (month == 2) {
             dayOfMonth += 31;
         } else if (month == 3) {
             dayOfMonth += 59;
@@ -69,7 +76,7 @@ public class Main {
         } else if (month == 11) {
             dayOfMonth += 31 + 28 + 31 + 30 + 31 + 30 + 31 + 31 + 30 + 31;
         } else if (month == 12) {
-            dayOfMonth += 31 + 28 + 31 + 30 + 31 + 30 + 31 + 31 + 30 + 31 + 31;
+            dayOfMonth += 31 + 28 + 31 + 30 + 31 + 30 + 31 + 31 + 30 + 31 + 30;
         }
         return dayOfMonth;
     }
